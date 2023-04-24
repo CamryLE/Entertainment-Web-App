@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Outfit', sans-serif;
 }
 
 
@@ -61,4 +64,35 @@
   border-radius: 50%;
   width: 60px;
   height: 60px;
+}
+
+/* Search */
+
+.search {
+position: absolute;
+width: 381px;
+height: 32px;
+left: 164px;
+top: 64px;
+}
+
+.search-icon {
+  position: absolute;
+width: 32px;
+height: 32px;
+left: 0px;
+top: 0px;
+}
+
+.searchbar {
+position: absolute;
+height: 30px;
+left: 14.7%;
+right: 1.05%;
+top: calc(50% - 30px/2);
+}
+
+.searchbar:focus {
+ 
+  outline: none;
 }
