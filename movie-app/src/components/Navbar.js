@@ -10,6 +10,7 @@ import Logo from '../assets/logo.svg'
 const Navbar = () => {
   return (
     <div className='navbar'>
+    <div className='top'>
       <div className='refresh'>
         <Link to={`/`}>
         <img src={Logo} className='logo'>
@@ -45,6 +46,7 @@ const Navbar = () => {
         
         </ul>
       </div>
+    </div>
       
       <div className='profile'>
         <Link to={`profile`}>
