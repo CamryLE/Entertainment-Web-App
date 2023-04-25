@@ -1,9 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import asset from './assets/thumbnails/112/regular/large.jpg'
 import MovieIcon from '../assets/icon-nav-movies.svg'
+import BookmarkTrue from '../assets/icon-bookmark-full.svg'
+import BookmarkFalse from '../assets/icon-bookmark-empty.svg'
 
 const Card = ({movie}) => {
+    const [bookmarked, setBookmarked] = useState(false)
+    
+    const Bookmark = () => {
+        setBookmarked(!bookmarked)
+    }
+
+    console.log(bookmarked)
+
     console.log(movie.thumbnail.regular.large)
   return (
     
@@ -17,15 +27,31 @@ const Card = ({movie}) => {
         padding:'30px',
         marginTop:'30px',
         display: 'flex',
-        alignItems:'flex-end'
+        flexDirection:'column',
+        justifyContent:'space-between',
+        alignItems:'baseline',
+        boxShadow: 'rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px'
+        
     }}>
-       {/* <img className='trending-thumbnail' src={`${movie.thumbnail.regular.large}`}
-       style={{
-        width: '470px', height: '230px',
-        objectFit:'cover',
-        borderRadius:'30px',
-       }}
-       ></img> */}
+        
+      <button style={{
+       
+        display:'flex',
+        justifyContent:'center',
+        alignItems:'center',
+        width: '32px',
+        height: '32px',
+        padding:'20px',
+        borderRadius:'50%',
+        border:'none',
+        backgroundColor: 'rgba(0,0,0,.5)',
+    
+        }}>
+            <img style={{width:'22px', height:'22px', padding:'10px', opacity:'1'}}  src= {bookmarked ? BookmarkTrue : BookmarkFalse} onClick={Bookmark}
+            ></img>
+        </button>
+
+
       <div className='info' style={{ }}>
         <ul className='movie-attr' style={{
             display:'flex',
