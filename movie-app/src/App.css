@@ -12,9 +12,13 @@
   background-color: #10141E;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  
   display: flex;
   align-items: center;
+}
+
+.main {
+  margin-left: 60px;
 }
 
 /* Navbar */
@@ -24,7 +28,7 @@
   margin: 20px;
   height: 95%;
   border-radius: 15px;
-  
+  position: fixed;
   background-color: #161D2F;
   display: flex;
   flex-direction: column;
@@ -69,7 +73,7 @@
 /* Search */
 
 .search {
-position: absolute;
+position: fixed;
 width: 381px;
 height: 32px;
 left: 164px;
@@ -96,3 +100,6 @@ top: calc(50% - 30px/2);
  
   outline: none;
 }
+
+/* Trending */
+
