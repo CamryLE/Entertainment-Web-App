@@ -19,6 +19,7 @@ const Trending = ({movies}) => {
           display:'flex', 
           height:'230px',
           width:'100%',
+          gap: '40px',
     
         }}
         >
