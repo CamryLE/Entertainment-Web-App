@@ -13,7 +13,7 @@ const Trending = ({movies}) => {
     }
     }
     >
-        <h1>Trending</h1>
+        <h1>Trending:</h1>
         <section className='Movies'
         style={{
           display:'flex', 
