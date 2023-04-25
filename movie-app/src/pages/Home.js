@@ -3,9 +3,9 @@ import Navbar from "../components/Navbar"
 import Search from '../components/Search'
 import Trending from '../components/Trending'
 import Recommended from '../components/Recommended'
-import movies from '../components/movies.json'
 
-const Home = () => {
+
+const Home = ({movies}) => {
    
   console.log(movies)
   

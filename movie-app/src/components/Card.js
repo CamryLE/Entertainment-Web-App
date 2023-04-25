@@ -12,7 +12,7 @@ const Card = ({movie}) => {
         color:'#fff',
         backgroundImage: `url(${movie.thumbnail.regular.large})`
     }}>
-       <img src={movie.thumbnail.regular.large}></img>
+       <img src={`${movie.thumbnail.regular.large}`}></img>
       <div className='info'>
         <div className='movie-attr' style={{display:'flex'}}>
             <div className='attr'>{movie.year}</div>

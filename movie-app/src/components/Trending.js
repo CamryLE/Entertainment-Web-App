@@ -9,7 +9,7 @@ const Trending = ({movies}) => {
       display:'flex', 
       height:'230px',
       width:'100%',
-
+      flexDirection:'column'
     }
     }
     >
