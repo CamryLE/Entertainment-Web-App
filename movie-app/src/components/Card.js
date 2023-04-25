@@ -2,13 +2,12 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import asset from './assets/thumbnails/112/regular/large.jpg'
 import MovieIcon from '../assets/icon-nav-movies.svg'
-import BookmarkTrue from '../assets/icon-bookmark-full.svg'
-import BookmarkFalse from '../assets/icon-bookmark-empty.svg'
+import Bookmark from './Bookmark'
 
 const Card = ({movie}) => {
     const [bookmarked, setBookmarked] = useState(false)
     
-    const Bookmark = () => {
+    const bookmark = () => {
         setBookmarked(!bookmarked)
     }
 
@@ -34,22 +33,7 @@ const Card = ({movie}) => {
         
     }}>
         
-      <button style={{
-       
-        display:'flex',
-        justifyContent:'center',
-        alignItems:'center',
-        width: '32px',
-        height: '32px',
-        padding:'20px',
-        borderRadius:'50%',
-        border:'none',
-        backgroundColor: 'rgba(0,0,0,.5)',
-    
-        }}>
-            <img style={{width:'22px', height:'22px', padding:'10px', opacity:'1'}}  src= {bookmarked ? BookmarkTrue : BookmarkFalse} onClick={Bookmark}
-            ></img>
-        </button>
+      <Bookmark bookmarked={bookmarked} bookmark= {bookmark} />
 
 
       <div className='info' style={{ }}>
