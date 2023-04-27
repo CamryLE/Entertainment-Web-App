@@ -17,7 +17,7 @@ const Card = ({movie}) => {
   return (
     
     <div className='trending-card'
-    style={{
+    style={{ 
         width: '470px', height: '230px',
         color:'#fff',
         backgroundImage: `url(${movie.thumbnail.regular.large})`,
