@@ -5,14 +5,9 @@ import MovieIcon from '../assets/icon-nav-movies.svg'
 import Bookmark from './Bookmark'
 
 const Card = ({movie}) => {
-    const [bookmarked, setBookmarked] = useState(false)
-    
-    const bookmark = () => {
-        setBookmarked(!bookmarked)
-    }
+   
 
-    console.log(bookmarked)
-
+   
     console.log(movie.thumbnail.regular.large)
   return (
     
@@ -33,7 +28,7 @@ const Card = ({movie}) => {
         
     }}>
         
-      <Bookmark bookmarked={bookmarked} bookmark= {bookmark} />
+      <Bookmark />
 
 
       <div className='info' style={{ }}>

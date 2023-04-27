@@ -127,8 +127,8 @@ top: calc(50% - 30px/2);
   transition-property: transform;
 }
 .trending-card:hover, .trending-card:focus, .trending-card:active {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
+  -webkit-transform: scale(1.01);
+  transform: scale(1.01);
   cursor: pointer;
 }
 

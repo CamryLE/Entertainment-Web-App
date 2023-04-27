@@ -27,7 +27,7 @@ const Trending = ({movies}) => {
     >
       
         <h1>Trending:</h1>
-        <Slider {...settings} className='Movies' style={{width:'75%', }}
+        <Slider {...settings} movies={movies} className='Movies' style={{width:'75%', }}
         >
           {/* <div style={{width:'200px', height:'150px', padding:'20px', backgroundColor:'#fff',}}> Deez </div>
           <div style={{width:'200px', height:'150px', padding:'20px', backgroundColor:'#fff',}}> Deez </div>
