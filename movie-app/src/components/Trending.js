@@ -9,7 +9,8 @@ const Trending = ({movies}) => {
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 3
+    slidesToScroll: 1,
+    arrows: false,
   };
   return (
     
@@ -26,7 +27,7 @@ const Trending = ({movies}) => {
     >
       
         <h1>Trending:</h1>
-        <Slider {...settings} className='Movies' style={{width:'1800px', marginLeft:'30px'}}
+        <Slider {...settings} className='Movies' style={{width:'75%', }}
         >
           {/* <div style={{width:'200px', height:'150px', padding:'20px', backgroundColor:'#fff',}}> Deez </div>
           <div style={{width:'200px', height:'150px', padding:'20px', backgroundColor:'#fff',}}> Deez </div>
