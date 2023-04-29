@@ -29,6 +29,7 @@ color: #FFFFFF;
 .main {
   margin-left: 200px;
   margin-top: 150px;
+  overflow-y: visible;
 }
 
 /* Navbar */
@@ -135,3 +136,26 @@ top: calc(50% - 30px/2);
 .info {
   cursor: auto;
 }
+
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #161d2f #10141e;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #10141e;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #2d3c61;
+    border-radius: 10px;
+    border: 3px solid #10141e;
+  }

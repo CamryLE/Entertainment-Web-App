@@ -3,7 +3,7 @@ import Card from './Card'
 import Slider from "react-slick";
 
 
-const Trending = ({movies}) => {
+const Trending = ({movies, setPreview, previewMovie, selectedMovie, setPreviewMovie, changePreview}) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -14,6 +14,9 @@ const Trending = ({movies}) => {
     autoplay: true,
     autoplaySpeed: 2000,
   };
+
+  
+
   return (
     
     <section className='trending'
@@ -31,15 +34,9 @@ const Trending = ({movies}) => {
         <h1>Trending:</h1>
         <Slider {...settings} movies={movies} className='Movies' style={{width:'75%', }}
         >
-          {/* <div style={{width:'200px', height:'150px', padding:'20px', backgroundColor:'#fff',}}> Deez </div>
-          <div style={{width:'200px', height:'150px', padding:'20px', backgroundColor:'#fff',}}> Deez </div>
-          <div style={{width:'200px', height:'150px', padding:'20px', backgroundColor:'#fff',}}> Deez </div>
-          <div style={{width:'200px', height:'150px', padding:'20px', backgroundColor:'#fff',}}> Deez </div>
-          <div style={{width:'200px', height:'150px', padding:'20px', backgroundColor:'#fff', color:'#fff'}}> Deez </div>
- */}
 
            {movies.map((movie) => (
-            <Card  key={movie.title} movie={movie}/>
+            <Card previewMovie={previewMovie} setPreview={setPreview} key={movie.title} movie={movie} selectedMovie={selectedMovie} setPreviewMovie={setPreviewMovie} changePreview={changePreview} />
           ))} 
         </Slider>
       </section>

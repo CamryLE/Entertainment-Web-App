@@ -3,48 +3,40 @@ import { Link } from 'react-router-dom'
 import asset from './assets/thumbnails/112/regular/large.jpg'
 import MovieIcon from '../assets/icon-nav-movies.svg'
 import Bookmark from './Bookmark'
-import Preview from './Preview'
 
-const Card = ({movie, bookmark, setBookmarked, bookmarked, selectedMovie, setPreviewMovie, previewMovie}) => {
-
+const RecommendedCard = ({movie}) => {
    
-   const changePreview = () => {
-    
-    setPreviewMovie( movie)
-   }
+
    
     
   return (
+    <div> 
     
-    <div className='trending-card' onClick={
-      changePreview
-    }
+      <div className='trending-card'
     style={{ 
-        width: '470px', height: '230px',
+        width: '280px', height: '174px',
         color:'#fff',
-        backgroundImage: `url(${movie.thumbnail.regular.large})`,
+        backgroundImage: `url(${movie.thumbnail.regular.medium})`,
         backgroundRepeat:'no-repeat',
-        borderRadius:'30px',
+        borderRadius:'10px',
         padding:'30px',
-        marginTop:'30px',
         display: 'flex',
         flexDirection:'column',
         justifyContent:'space-between',
         alignItems:'baseline',
-        boxShadow: 'rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px'
-        
+        boxShadow: 'rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px'   
     }}>
-     
-      <Bookmark  bookmark={bookmark} setBookmarked={setBookmarked} bookmarked={bookmarked} />
-
-
-      <div className='info' style={{ }}>
+      <Bookmark />
+    </div>
+    <div className='info' style={{ }}>
         <ul className='movie-attr' style={{
+            width:'157', height:'44',
             display:'flex',
             gap:'30px',
             opacity: '0.75', fontWeight: '300',
             fontSize: "15px",
             lineHeight: "19px",
+            marginTop:'8px'
             
             }}>
             <li className='attr1'
@@ -59,9 +51,12 @@ const Card = ({movie, bookmark, setBookmarked, bookmarked, selectedMovie, setPre
         <h1 className='title'>{movie.title}</h1>
       </div>
 
+    
     </div>
+    
+ 
     
   )
 }
 
-export default Card
+export default RecommendedCard
