@@ -43,13 +43,18 @@ const Home = ({movies}) => {
 
   return (
     
-    <div className='App'>
-      
-      <Navbar />
-      <div className='main'>
-        <Preview previewMovie={previewMovie} 
+    <div className='App' style={{}}>
+      <Preview previewMovie={previewMovie} 
         // selectedMovie={selectedMovie} 
         />
+      <Navbar />
+      <div className='main' style={{
+        // display:'flex',
+        // flexDirection:'column',
+        // justifyContent:'center'
+      }
+      }>
+        
         <Search />
         <Trending movies={movies} previewMovie={previewMovie} changePreview={changePreview} setPreviewMovie={setPreviewMovie} selectedMovie={selectedMovie}
         />
