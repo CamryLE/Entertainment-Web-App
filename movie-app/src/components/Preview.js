@@ -1,15 +1,16 @@
 import React from 'react'
 
 
-const Preview = ({previewMovie }) => {
+const Preview = ({previewMovie, closePreview }) => {
 
  
 
   return (
-    <div
+    <div className='preview' id='preview'
      style={{
-        // display: `${show}`
-        position:'absolute',
+        position:'fixed',
+        
+        
         overflowY: 'visible',
         overflowX: 'visible',
         color:'#fff',
@@ -25,12 +26,14 @@ const Preview = ({previewMovie }) => {
         padding:'40px',
         alignItems:'flex-end',
         justifyContent:'center',
-        flexWrap:'nowrap'
+        flexWrap:'nowrap',
+        borderRadius:'30px',
+        boxShadow:'rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px'
     }}>
-      <button className='close'
+      <button className='close' onClick={closePreview}
       
       > X </button>
-      <div classname='preview-content' style={{
+      <div className='preview-content' style={{
         width:'1200px',
         height:'70%',
         

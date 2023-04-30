@@ -6,6 +6,8 @@ import Recommended from '../components/Recommended'
 import Preview from '../components/Preview'
 
 
+
+
 const Home = ({movies}) => {
 
   const [previewMovie, setPreviewMovie] = useState({
@@ -29,9 +31,20 @@ const Home = ({movies}) => {
   },)
   let selectedMovie = 1
   
+  const preview = document.querySelector('.preview')
+
   const changePreview = (movie) => {
     console.log('deez')
     
+  }
+
+  const closePreview = () => {
+    console.log(preview)
+    preview.classList.add('hidden')
+  }
+  const openPreview = () => {
+    console.log(preview)
+    preview.classList.remove('hidden')
   }
   
   const setPreview = (movie) => {
@@ -44,7 +57,7 @@ const Home = ({movies}) => {
   return (
     
     <div className='App' style={{}}>
-      <Preview previewMovie={previewMovie} 
+      <Preview previewMovie={previewMovie} closePreview={closePreview} 
         // selectedMovie={selectedMovie} 
         />
       <Navbar />
@@ -56,7 +69,7 @@ const Home = ({movies}) => {
       }>
         
         <Search />
-        <Trending movies={movies} previewMovie={previewMovie} changePreview={changePreview} setPreviewMovie={setPreviewMovie} selectedMovie={selectedMovie}
+        <Trending movies={movies} previewMovie={previewMovie} changePreview={changePreview} setPreviewMovie={setPreviewMovie} selectedMovie={selectedMovie} openPreview={openPreview}
         />
         <Recommended movies={movies}/>
         

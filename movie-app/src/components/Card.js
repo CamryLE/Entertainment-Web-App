@@ -5,18 +5,19 @@ import MovieIcon from '../assets/icon-nav-movies.svg'
 import Bookmark from './Bookmark'
 import Preview from './Preview'
 
-const Card = ({movie, bookmark, setBookmarked, bookmarked, selectedMovie, setPreviewMovie, previewMovie}) => {
+const Card = ({movie, bookmark, setBookmarked, bookmarked, selectedMovie, setPreviewMovie, previewMovie, openPreview}) => {
 
    
    const changePreview = () => {
     
-    setPreviewMovie( movie)
+    setPreviewMovie(movie)
+    openPreview ()
    }
    
     
   return (
     
-    <div className='trending-card' onClick={
+    <div className='trending-card' onClick={ 
       changePreview
     }
     style={{ 

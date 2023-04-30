@@ -3,7 +3,7 @@ import Card from './Card'
 import Slider from "react-slick";
 
 
-const Trending = ({movies, setPreview, previewMovie, selectedMovie, setPreviewMovie, changePreview}) => {
+const Trending = ({movies, setPreview, previewMovie, selectedMovie, setPreviewMovie, changePreview, openPreview}) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -25,7 +25,7 @@ const Trending = ({movies, setPreview, previewMovie, selectedMovie, setPreviewMo
       display:'flex',
       flexDirection:'column',
       height:'430px',
-      width:'2300px',
+      width:'2600px',
       overflow:'hidden'
     }
     }
@@ -36,7 +36,7 @@ const Trending = ({movies, setPreview, previewMovie, selectedMovie, setPreviewMo
         >
 
            {movies.map((movie) => (
-            <Card previewMovie={previewMovie} setPreview={setPreview} key={movie.title} movie={movie} selectedMovie={selectedMovie} setPreviewMovie={setPreviewMovie} changePreview={changePreview} />
+            <Card openPreview={openPreview} previewMovie={previewMovie} setPreview={setPreview} key={movie.title} movie={movie} selectedMovie={selectedMovie} setPreviewMovie={setPreviewMovie} changePreview={changePreview} />
           ))} 
         </Slider>
       </section>
